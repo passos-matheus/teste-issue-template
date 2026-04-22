@@ -1,59 +1,19 @@
 <!--
-🇧🇷 Português | 🇺🇸 English
-
-Use este PR para adicionar seu arquivo em `./participants/<seu-usuario-github>.json` e registrar sua submissão.
-Para PRs de documentação, engine ou infra, o checklist abaixo não se aplica — pode apagar a seção.
-
-Use this PR to add your file to `./participants/<your-github-username>.json` and register your submission.
-For docs, engine or infra PRs, the checklist below does not apply — feel free to delete the section.
+🇧🇷 Use este PR para adicionar `./participants/<seu-usuario>.json`. Em PRs de doc/engine/infra, apague o checklist.
+🇺🇸 Use this PR to add `./participants/<your-username>.json`. For docs/engine/infra PRs, delete the checklist.
 -->
 
-## 🇧🇷 Descrição / 🇺🇸 Description
+## Descrição / Description
 
 <!-- 🇧🇷 O que esse PR faz? / 🇺🇸 What does this PR do? -->
 
----
+## Checklist da submissão / Submission checklist
 
-## ✅ Checagem obrigatória da submissão / Submission checklist
+- [ ] **1 CPU + 350MB RAM** no total entre os serviços / total across services
+- [ ] Backend na **porta / port 9999**
+- [ ] Imagens / images **linux/amd64**
+- [ ] Rede / network **bridge** (sem `host`, sem `privileged` / no `host`, no `privileged`)
+- [ ] **≥ 1 load balancer + 2 APIs**, LB sem lógica de aplicação (lei Gabriel-2025) / LB with no app logic (Gabriel-2025 law)
+- [ ] Repo **público / public** com branches `main` + `submission`
+- [ ] `submission` tem / has `docker-compose.yml` na raiz / at root + `info.json`
 
-### 🇧🇷 Português
-
-**Recursos e rede**
-- [ ] Minha submissão respeita o limite de **1 unidade de CPU** e **350MB de memória**, somando todos os serviços declarados no `docker-compose.yml`.
-- [ ] Meu backend escuta na **porta 9999**.
-- [ ] As imagens utilizadas são compatíveis com **linux/amd64**.
-- [ ] O modo de rede está como **bridge** (o modo `host` não é permitido).
-- [ ] Nenhum serviço está em modo **privileged**.
-
-**Topologia**
-- [ ] Tenho **pelo menos um load balancer** e **duas instâncias de API**.
-- [ ] Meu load-balancer passou na lei Gabriel-2025: não tem lógica de aplicação nem responde pelas APIs (sem `~smart~ load balancing`).
-
-**Repositório**
-- [ ] Meu repositório é **público**.
-- [ ] Tenho a branch `main` com o código-fonte e a branch `submission` com os arquivos de execução.
-- [ ] A branch `submission` tem o `docker-compose.yml` na **raiz**.
-- [ ] A branch `submission` tem um `info.json` preenchido.
-
-### 🇺🇸 English
-
-**Resources and network**
-- [ ] My submission respects the limit of **1 CPU unit** and **350MB of memory**, across all services declared in `docker-compose.yml`.
-- [ ] My backend listens on **port 9999**.
-- [ ] The images used are compatible with **linux/amd64**.
-- [ ] Network mode is set to **bridge** (`host` mode is not allowed).
-- [ ] No service runs in **privileged** mode.
-
-**Topology**
-- [ ] I have **at least one load balancer** and **two API instances**.
-- [ ] My load balancer complies with the Gabriel-2025 law: no application logic and it does not respond on behalf of the APIs (no `~smart~ load balancing`).
-
-**Repository**
-- [ ] My repository is **public**.
-- [ ] I have a `main` branch with the source code and a `submission` branch with the execution files.
-- [ ] The `submission` branch has `docker-compose.yml` at the **root**.
-- [ ] The `submission` branch has a filled-in `info.json`.
-
----
-
-🚀 🇧🇷 Seja feliz! / 🇺🇸 Have fun!
