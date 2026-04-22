@@ -1,16 +1,14 @@
 ---
-name: Submissão
-about: Template de submissão com alguns checks
-title: "[SUBMISSÃO] "
-labels: ["submissao"]
+name: Submissão / Submission
+about: Dispara a execução dos testes pela engine da Rinha. Triggers test execution by the Rinha engine.
+title: "[SUBMISSION] "
+labels: ["submission"]
 assignees: []
 ---
 
-## Checagem obrigatória
+<!--
+🇧🇷 Não remova a linha `rinha/test`. Se tiver mais de uma submissão, informe o id — ex.: `rinha/test ana-experimental`.
+🇺🇸 Do not remove the `rinha/test` line. If you have more than one submission, include the id — e.g. `rinha/test ana-experimental`.
+-->
 
-- [ ] Minha submissão respeita o limite de **1 CPU** e **350MB RAM**
-- [ ] Meu backend escuta na **porta 9999**
-- [ ] As imagens são compatíveis com **linux/amd64**
-- [ ] O modo de rede está como **bridge**
-
-Seja feliz! 🚀
+rinha/test
